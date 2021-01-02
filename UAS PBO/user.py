@@ -1,6 +1,5 @@
-# import main
+
 import PilihanMenu 
-# from sqlite3.dbapi2 import Cursor
 
 class users(PilihanMenu.Menuu):
     def getUser(self):
