@@ -1,6 +1,6 @@
 import main
 
-class gajiKaryawan(main.inti):
+class GajiKaryawan(main.Inti):
     jumlahGaji = 0
     def gaji(self):
         self.tanggalGajian = input("Masukan tanggal :")

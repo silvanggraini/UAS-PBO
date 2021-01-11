@@ -1,7 +1,7 @@
 import sqlite3
 # from sqlite3.dbapi2 import Cursor
 
-class inti:
+class Inti:
     def __init__(self):
         self.con = sqlite3.connect("Projekk.db")
         self.cursor = self.con.cursor()

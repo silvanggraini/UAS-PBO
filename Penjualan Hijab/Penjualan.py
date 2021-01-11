@@ -1,12 +1,12 @@
 import TampilHijab
 
-class transaksiPenjualan(TampilHijab.stokBarang):
+class TransaksiPenjualan(TampilHijab.tampilTabel):
     totalTP = 0
     def penjualan(self):
         print("Silahkan mau belanja apa")
         print(f'{"No"} \t{"Jenis Barang"} \t{"Nama Barang"} \t {"Harga Barang"} \t {"Stok Barang"}')
         print('-'*75)
-        self.tampilDataStokBarang()
+        self.tampilData('stokBarangHijab')
         self.jenisBarangJual = input("Masukan jenis barang? ")
         if self.jenisBarangJual == "Pashmina":
             self.namaBarang = input("Apa nama barang yang dicari? ")

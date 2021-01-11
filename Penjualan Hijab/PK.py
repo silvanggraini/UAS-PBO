@@ -1,6 +1,6 @@
 import main
 
-class karyawan(main.inti):
+class Karyawan(main.Inti):
     def inputKaryawan(self):
         self.namakaryawan = input("Masukan nama:")
         self.umurKaryawan = int(input("Masukan umur:"))
@@ -9,7 +9,7 @@ class karyawan(main.inti):
         self.query = self.query % (self.namakaryawan, self.umurKaryawan, self.alamatkaryawan)
         self.execute(self.query)
 
-class pelanggan(main.inti):
+class Pelanggan(main.Inti):
     def inputPelanggan(self):
         self.namaPelanggan = input("Masukan nama pelanggan :")
         self.noHpPelanggan = input("Masukan no Hp pelanggan :")

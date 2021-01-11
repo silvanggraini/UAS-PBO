@@ -1,6 +1,6 @@
 import main
 
-class transaksiPembelian(main.inti):
+class TransaksiPembelian(main.Inti):
     totalTB = 0
     def pembelian(self):
         self.tanggalPembelian = str(input("Masukan tanggal pembelian :"))
@@ -8,15 +8,15 @@ class transaksiPembelian(main.inti):
         self.jumlahBarang = int(input("Masukan jumlah barang:"))
         self.hargaBarang = int(input("Masukan harga barang :"))
         self.namaToko = input("Masukan nama toko :")
+        self.noHpToko = int(input("Masukan no hp pemilik toko :"))
         # self.noHpToko = int(input("Masukan no hp pemilik toko :")) , noHpToko ,\'%d\' self.noHpToko,
         self.totalTB = self.jumlahBarang * self.hargaBarang
         print(self.totalTB)
 
-        self.query = '''INSERT INTO transaksiPembelian (tanggalPembelian, jenisBarang, hargaBarang, jumlahBarang, 
-        total_hargaPembelian, namaToko) 
-        VALUES (\'%s\',\'%s\',\'%d\',\'%d\',\'%d\',\'%s\');'''
+        self.query = '''INSERT INTO transaksiPembelian (tanggalPembelian, jenisBarang, hargaBarang, jumlahBarang, total_hargaPembelian, namaToko, noHpToko) 
+        VALUES (\'%s\',\'%s\',\'%d\',\'%d\',\'%d\',\'%s\',\'%s'\);'''
         self.query = self.query % (self.tanggalPembelian, self.jenisBarang, self.hargaBarang, self.jumlahBarang,
-        self.totalTB,self.namaToko)
+        self.totalTB,self.namaToko, self.noHpToko)
         self.execute(self.query)
 
     def getTotalTB(self):
